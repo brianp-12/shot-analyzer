@@ -13,6 +13,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+            title: 'Shot Analyzer',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        textTheme: GoogleFonts.montserratTextTheme(
+          ThemeData.light().textTheme
+        ).apply(
+          fontFamily: GoogleFonts.montserrat(fontWeight: FontWeight.w700).fontFamily,
+          displayColor: Colors.black,
+        )
+      ),
       home :const HomePage(),
     );
   }

@@ -8,18 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Shot Analyzer',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        textTheme: GoogleFonts.montserratTextTheme(
-          ThemeData.light().textTheme
-        ).apply(
-          fontFamily: GoogleFonts.montserrat(fontWeight: FontWeight.w700).fontFamily,
-          displayColor: Colors.black,
-        )
-      ),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: 
           Align( 
@@ -35,35 +24,23 @@ class HomePage extends StatelessWidget {
             
            ),
         body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column (
-            children: [
-              Button(
-                text: 'Analyze',
-                color: Colors.orange,
-                icon: Icons.home,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              ),
-              Button(
-                text: 'Profile',
-                color: Colors.orange,
-                icon: Icons.person,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              ),
-              Button(
-                text: 'Settings',
-                color: Colors.orange,
-                icon: Icons.settings,
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              ),
-              // Add other widgets here
-            ],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Button(
+                  text: 'Analyze Shot',
+                  color: Colors.orange,
+                  icon: Icons.analytics,
+                  padding: EdgeInsets.all(16.0),
+                ),
+              ],
+            ),
 
-          ),)
+          
         ),
         bottomNavigationBar: const NavBar(),
-      )
+      
+      
     );
   }
 }

@@ -18,15 +18,26 @@ class Button extends StatelessWidget {
 
       return Padding(
         padding: padding,
-        child: Container(
-          margin: const EdgeInsets.only(top: 8.0),
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
+        child: Column(
+         mainAxisSize: MainAxisSize.min,
+
+          children: [
+            Icon(
+              icon,
+              color: Colors.orange,
             ),
-        ),
+            const SizedBox(height: 8.0),
+            Text(
+              text,
+              style: const TextStyle(
+                color: Colors.orange,
+                fontSize: 16.0,
+              ),
+            ),
+
+
+
+          ]
       ));
   }
 } 
