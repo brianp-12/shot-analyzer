@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:shot_analyzer/data/shots.dart';
+
+class AnalyzePage extends StatelessWidget {
+  const AnalyzePage({super.key});
+
+  double calculatePercentage() {
+    int madeShots = 0;
+    for (var shot in shots) {
+      if (shot['made'] == true) {
+        madeShots++;
+      }
+    }
+    return (madeShots / shots.length) * 100;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Analyze Shots')),
+      body: ListView.builder(
+        itemCount: shots.length,
+        itemBuilder: (context, index) {
+          final shot = shots[index];
+          return ListTile(
+            title: Text('Distance: ${shot['distance']}'),
+            subtitle: Text('Made: ${shot['made']}'),
+          );
+        },
+      ),
+    );
+  }
+}
