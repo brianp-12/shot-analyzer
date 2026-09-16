@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shot_analyzer/widgets/navbar.dart';
 import 'package:shot_analyzer/pages/home_page.dart';
 
 void main() {
@@ -12,8 +11,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-            title: 'Shot Analyzer',
+      title: 'Shot Analyzer',
       theme: ThemeData(
         primarySwatch: Colors.orange,
         textTheme: GoogleFonts.montserratTextTheme(
@@ -25,6 +25,6 @@ class MainApp extends StatelessWidget {
       ),
       home :const HomePage(),
     );
+
   }
 }
-
