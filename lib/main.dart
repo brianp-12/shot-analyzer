@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shot_analyzer/pages/home_page.dart';
+import 'package:shot_analyzer/pages/analyze.dart';
 
-void main() {
-  runApp(const MainApp());
-}
 
-class MainApp extends StatelessWidget {
+    
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
+  
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'Shot Analyzer',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        textTheme: GoogleFonts.montserratTextTheme(
-          ThemeData.light().textTheme
-        ).apply(
-          fontFamily: GoogleFonts.montserrat(fontWeight: FontWeight.w700).fontFamily,
-          displayColor: Colors.black,
-        )
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.robotoTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
-      home :const HomePage(),
+      home: const HomePage(),
     );
-
   }
 }

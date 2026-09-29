@@ -10,15 +10,7 @@ final yolo = YOLO(
 class AnalyzePage extends StatelessWidget {
   const AnalyzePage({super.key});
 
-  double calculatePercentage() {
-    int madeShots = 0;
-    for (var shot in shots) {
-      if (shot['made'] == true) {
-        madeShots++;
-      }
-    }
-    return (madeShots / shots.length) * 100;
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -35,5 +27,14 @@ class AnalyzePage extends StatelessWidget {
         },  
       ),
     );
+  }
+  double calculatePercentage() {
+    int madeShots = 0;
+    for (var shot in shots) {
+      if (shot['made'] == true) {
+        madeShots++;
+      }
+    }
+    return (madeShots / shots.length) * 100;
   }
 }
