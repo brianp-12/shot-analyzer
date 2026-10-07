@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shot_analyzer/pages/home_page.dart';
-import 'package:shot_analyzer/pages/analyze.dart';
+
+import 'package:shot_analyzer/vision/pose_detector.dart';
 
 
-    
+    void main() => runApp(PoseDetector());
+
 class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
@@ -23,7 +24,7 @@ class _MainAppState extends State<MainApp> {
           Theme.of(context).textTheme,
         ),
       ),
-      home: const HomePage(),
+      home: const PoseDetector(),
     );
   }
 }

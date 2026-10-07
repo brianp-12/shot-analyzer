@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ultralytics_yolo/ultralytics_yolo.dart';
-import 'package:shot_analyzer/data/shots.dart';
+import 'package:shot_analyzer/analysis/shots.dart';
 
 final yolo = YOLO(
   modelPath: 'assets/models/yolo11n-pose.mlpackage' 
   
   );
+
+
 
 class AnalyzePage extends StatelessWidget {
   const AnalyzePage({super.key});
